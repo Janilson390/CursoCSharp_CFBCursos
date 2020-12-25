@@ -16,10 +16,11 @@ class Aula06{
 
         ValorVenda = PrecoUnitario + (PrecoUnitario * Lucro);
         
+        Console.WriteLine("...........Resultado Final.........");
         Console.WriteLine("Produto...................{0,10}", NomeProduto);
         Console.WriteLine("Valor de Compra...........{0,10:c}", PrecoUnitario);
         Console.WriteLine("Margem de Lucro...........{0,10:p}", Lucro);
         Console.WriteLine("Valor de Venda............{0,10:c}", ValorVenda);
-        Console.ReadKey();
+        Console.ReadKey(); 
     }
 }
