@@ -2,9 +2,13 @@ using System;
 class Aula10{
     static void Main()
     {
-        float num = 5.10f;
-        int num2 = (int)num; //Type Cast
+        int num = 10;
+        long numLong = num;
 
-        Console.WriteLine("Valor de num2 {0}", num);
+        Console.WriteLine("Valor de numLong {0}", numLong);
+
+        short numShort = (short)num;
+
+        Console.WriteLine("Valor de numShort {0}", numShort);
     }   
 }
