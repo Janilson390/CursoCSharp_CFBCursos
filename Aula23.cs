@@ -17,5 +17,23 @@ class Aula23{
         foreach (int v in vetor1){
             Console.Write("{0} ", v);
         }
+
+        //public static int BinarySearch(array, valor)
+        Console.WriteLine("\n---------------------------------------");
+        int procurado = 33;
+        int pos = Array.BinarySearch(vetor1, procurado);
+        
+        if(pos < 0){
+            Console.Write("O valor {0} não foi localizado no vetor!", procurado);
+        }else{
+            Console.Write("O valor {0} está na posição {1}", procurado, pos);
+        }
+
+        //public static void Copy(Ar_origem, Ar_destino, qtd_elementos)
+        Console.WriteLine("\n---------------------------------------");
+        Array.Copy(vetor1, vetor2, vetor1.Length);
+        foreach (int v in vetor2){
+            Console.Write("{0} ", v);
+        }
     }   
 }
