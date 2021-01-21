@@ -14,6 +14,10 @@ public class Jogador{
         vivo = true;
         nome = n;
     }
+
+    ~Jogador(){
+        Console.WriteLine("Jogador {0} Destruido!", nome);
+    }
 }
 class Aula29{
     static void Main(){
