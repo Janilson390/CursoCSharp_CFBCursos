@@ -39,9 +39,9 @@ class Aula16{
 
         Console.WriteLine("");
         Console.WriteLine("Calcular Novamento?[s/n]");
-        Opcao = (char)Console.Read();
+        Opcao = char.Parse(Console.ReadLine());
 
-        if(Opcao == 's')
+        if(Opcao == 's' || Opcao == 'S')
         {
             goto Inicio;
         }else
