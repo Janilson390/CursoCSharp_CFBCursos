@@ -37,21 +37,42 @@ static public class Jogador{
     //    Console.WriteLine("Jogador {0} Destruido!", nome);
     //}
 }
+
+class Inimigo{
+    static public bool alerta;
+    public string nome;
+
+    public Inimigo(string n){
+        alerta = false;
+        nome = n;
+    }
+
+    public void info(){
+        Console.WriteLine("Nome Inimigo......{0}", nome);
+        Console.WriteLine("Status Inimigo....{0}\n", alerta?"Alerta!":"Dormindo!");
+    }
+}
 class Aula31{
     static void Main(){
-        Jogador.Iniciar();
-        Jogador.info();
-
         Jogador.Iniciar("Bruno");
         Jogador.info();
 
-        Jogador.Iniciar("Théo", 50, true);
-        Jogador.info();
+        Console.WriteLine("--------------------------");
 
-        Jogador.Iniciar("Benegundesfirno", 0, false);
-        Jogador.info();    
+        Inimigo i1 = new Inimigo("Goblin");
+        Inimigo i2 = new Inimigo("Gigante");
+        Inimigo i3 = new Inimigo("Hárpia");
 
-        Jogador.Iniciar();
-        Jogador.info(); 
+        i1.info();
+        i2.info();
+        i3.info();
+
+        Console.WriteLine("--------------------------");
+
+        Inimigo.alerta=true;
+
+        i1.info();
+        i2.info();
+        i3.info();
     }
 }
