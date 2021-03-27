@@ -1,28 +1,33 @@
 using System;
 
-public class Jogador{
-    public int energia;
-    public bool vivo;
-    public string nome;
+static public class Jogador{
+    static public int energia;
+    static public bool vivo;
+    static public string nome;
+    static public int numero = 0;
 
-    public Jogador(){
+    static public void Iniciar(){
+        numero++;
+        nome = "Jogador nº "+ numero.ToString();
         energia = 100;
         vivo = true;
     }
-    
-    public Jogador(string n){
-        energia = 100;
-        vivo = true;
+
+    static public void Iniciar(string n){
+        
         nome = n;
+        energia = 100;
+        vivo = true;
     }
 
-    public Jogador(string n, int e, bool v){
+    static public void Iniciar(string n, int e, bool v){
+        
+        nome = n;
         energia = e;
         vivo = v;
-        nome = n;
     }
 
-    public void info(){
+    static public void info(){
         Console.WriteLine("Nome jogador.......{0}", nome);
         Console.WriteLine("Energia jogador....{0}", energia);
         Console.WriteLine("Estado jogador.....{0}\n", vivo?"Vivo":"Morto");
@@ -34,14 +39,19 @@ public class Jogador{
 }
 class Aula31{
     static void Main(){
-        Jogador j1 = new Jogador();
-        Jogador j2 = new Jogador("Bruno");
-        Jogador j3 = new Jogador("Théo", 50, true);
-        Jogador j4 = new Jogador("Benegundesfirno", 0, false);
+        Jogador.Iniciar();
+        Jogador.info();
 
-        j1.info();
-        j2.info();
-        j3.info();
-        j4.info();        
+        Jogador.Iniciar("Bruno");
+        Jogador.info();
+
+        Jogador.Iniciar("Théo", 50, true);
+        Jogador.info();
+
+        Jogador.Iniciar("Benegundesfirno", 0, false);
+        Jogador.info();    
+
+        Jogador.Iniciar();
+        Jogador.info(); 
     }
 }
