@@ -1,7 +1,7 @@
 using System;
 
 class Jogador{
-    public int energia;
+    private int energia;
     public string nome;
     public Jogador(string nome){
         this.nome = nome;
