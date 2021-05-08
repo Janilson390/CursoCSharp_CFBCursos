@@ -14,6 +14,15 @@ class Veiculo{ //Classe Base
     public bool getLigado(){
         return ligado;
     }
+
+    public Veiculo (int rodas)
+    {
+        this.rodas = rodas;
+    }
+
+    public int getRodas(){
+        return rodas;
+    }
 }
 
 class Carro:Veiculo{
@@ -21,21 +30,19 @@ class Carro:Veiculo{
     
     public string cor;
     
-    public Carro(){
+    public Carro():base(4){
         Desligar();
-        rodas = 4;
         velMax = 120;
     }
 
-    public Carro(string nome, string cor){
+    public Carro(string nome, string cor):base(4){
         Desligar();
-        rodas = 4;
         velMax = 120;
         this.nome = nome;
         this.cor = cor;
     }
 }
-class Aula34{
+class Aula35{
     static void Main(){
         Carro c1 = new Carro();
 
@@ -50,7 +57,7 @@ class Aula34{
         Console.WriteLine("O carro 2 está {0}", c2.getLigado()?"Ligado":"Desligado");
         Console.WriteLine("Nome...........{0}", c2.nome);
         Console.WriteLine("Cor............{0}", c2.cor);
-        Console.WriteLine("Rodas..........{0}", c2.rodas);
+        Console.WriteLine("Rodas..........{0}", c2.getRodas());
         Console.WriteLine("Vel. Máxima....{0}", c2.velMax);
     }
 }
